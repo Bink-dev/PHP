@@ -14,6 +14,6 @@ $a = "die geen fout";
 $b = "en";
 $c = "niet.";
 
-$volledigezin = "Mens" . $b . " " . $a . $b . " Mak" . $b . ", werk" . $b . $c;
+$volledigezin = "Mens" . $b . " " . $a . $b . " Mak" . $b . ", werk" . $b . " " . $c;
 
 echo $volledigezin;
