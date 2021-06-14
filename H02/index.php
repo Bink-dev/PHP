@@ -4,11 +4,11 @@ $a = "Ik heb niet gefaald";
 $b = "die niet werken";
 $c = 10000;
 
-$volledigezin = $a . " ik heb alleen " . $c . " manieren gevonden " . $b;
+$volledigezin = $a . " ik heb alleen " . $c . " manieren gevonden " . $b . "<br>";
 
 echo $volledigezin;
 
-nl2br(" ");
+
 
 $a = "die geen fout";
 $b = "en";
