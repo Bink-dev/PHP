@@ -8,6 +8,8 @@ $volledigezin = $a . " ik heb alleen " . $c . " manieren gevonden " . $b;
 
 echo $volledigezin;
 
+nl2br();
+
 $a = "die geen fout";
 $b = "en";
 $c = "niet.";
