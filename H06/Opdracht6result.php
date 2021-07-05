@@ -60,4 +60,4 @@ if ($_POST['email']=="truushendriks@wegweg.nl"&& $_POST['wachtwoord']=='arkieark
 else{
     echo "<h1>U heeft geen toegang.</h1>";
 }
-
+?>
