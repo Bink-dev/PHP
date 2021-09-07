@@ -23,7 +23,7 @@ try {
 </head>
 <body>
 
-<form action="Opdracht7result.php" method="POST">
+<form action="Opdracht7Mid.php" method="POST">
     Email <input type="text" name="email" value="">
     Wachtwoord <input type="password" name="wachtwoord" value="">
     <input type="submit" name="knop" value="verstuur">
