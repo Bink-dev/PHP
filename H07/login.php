@@ -16,19 +16,19 @@ if ($_POST['email']=="admin"&& $_POST['wachtwoord']=='admin') {
     print_r($_SESSION);
     echo "<a href='website.php'><br>website<br></a>";
     echo "<a href='admin.php'>Admin Panel<br></a>";
-    echo "<a href='login.php?loguit'>Log uit<br></a>";
+    echo "<a href='login.php'>Log uit<br></a>";
     die();
 }
 
 if (isset($_GET['loguit'])){
     $_SESSION = array();
     session_destroy();
-    header('location: login.html');
+    header('location: login.php');
 }
 
 else{
     echo "<h1>Sorry, geen toegang</h1>";
-    echo "<a href='login.html'><br>terug<br></a>";
+    echo "<a href='login.php'><br>terug<br></a>";
     $login=false;
     echo $login;
 }
