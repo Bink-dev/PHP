@@ -3,6 +3,7 @@ session_start();
 if ($_POST['email']=="test"&& $_POST['wachtwoord']=='test') {
     echo '<h1>Welkom test,</h1>';
     $_SESSION['user'] = $_POST['email'];
+    $_SESSION['admin']="ja";
     print_r($_SESSION);
     echo "<a href='user.php'><br>website<br></a>";
     echo "<a href='admin.php'>Admin Panel<br></a>";
@@ -23,12 +24,11 @@ if ($_POST['email']=="admin"&& $_POST['wachtwoord']=='admin') {
 if (isset($_GET['loguit'])){
     $_SESSION = array();
     session_destroy();
-    header('location: login.php');
 }
 
 else{
     echo "<h1>Sorry, geen toegang</h1>";
-    echo "<a href='login.php'><br>terug<br></a>";
+    echo "<a href='start.html'><br>terug<br></a>";
     $login=false;
     echo $login;
 }
