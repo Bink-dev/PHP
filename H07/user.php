@@ -5,5 +5,5 @@ if (isset($_SESSION['user'])){
     echo "<a href='login.php?loguit'>Log uit</a>";
 }
 else{
-    header('location: login.html');
+    header('location: login.php');
 }
