@@ -4,7 +4,7 @@ try {
     $host = "localhost";
     $user = "root";
     $password = "";
-    $database = "phpform";
+    $database = "phpschool";
 
     $db = new PDO("mysql:host=" . $host . ";dbname=" . $database, $user, $password);
 } catch (PDOException $error) {
