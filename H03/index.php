@@ -33,7 +33,7 @@ for($a = 35; $a >= 25; $a--){
 echo "<br>";
 echo "opdracht 5 staat als apart hoofdstuk erbij hetzelfde geld voor hoofdstuk 6 <br>";
 
-$leeftijd = 2;
+$leeftijd = 77;
 
 if ($leeftijd < 3) {
     echo "Je hoeft niks te betalen.";
