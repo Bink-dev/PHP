@@ -11,7 +11,6 @@ try {
     echo $error->getMessage();
     die();
 }
-
 $query = "select * from cursist";
 $result = $db->query($query);
 
