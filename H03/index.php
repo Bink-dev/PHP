@@ -31,7 +31,7 @@ for($a = 35; $a >= 25; $a--){
 }
 
 echo "<br>";
-echo "opdracht 5 staat als apart hoofdstuk erbij hetzelfde geld voor hoofdstuk 6 <br>";
+echo "opdracht 5 staat als apart hoofdstuk erbij hetzelfde geld voor hoofdstuk 6 <br><br>";
 
 $leeftijd = 77;
 
