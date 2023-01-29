@@ -17,3 +17,4 @@ if ($conn->connect_error) {
 echo ("Connection Successful");
 
 mysqli_close($conn);
+
