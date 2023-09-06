@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo '<ul>';
 
             foreach ($studenten as $student) {
-                echo '<li>' . $student['roepnaam'] . ' ' . $student['tussenvoegsels'] . ' ' . $student['achternaam'] . '</li>';
+                echo '<li>' . $student['roepnaam'] . ' ' . $student['tussenvoegsels'] . ' ' . $student['achternaam'] . $student['studentnr'] . '</li>';
             }
 
             echo '</ul>';
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $opleidingen = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     echo '<h3>Studenten per opleiding:</h3>';
-    echo '<form method="POST" action="">';
+    echo '<form method="POST" action="studenten_bekijken.php">';
     echo '<label for="opleidingscode">Opleiding:</label>';
     echo '<select name="opleidingscode" id="opleidingscode">';
 
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo '</form>';
 
     echo '<h3>Studenten koppelen aan opleiding:</h3>';
-    echo '<form method="POST" action="">';
+    echo '<form method="POST" action="koppel_opleiding.php">';
     echo '<label for="studentnr">Studentnummer:</label>';
     echo '<input type="text" name="studentnr" id="studentnr"><br>';
     echo '<label for="opleidingscode">Opleiding:</label>';
