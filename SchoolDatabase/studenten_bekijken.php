@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['opleidingscode'])) {
     $stmt->execute([$opleidingscode]);
     $studenten = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    echo '<h3>Studenten per opleiding:</h3>';
+    echo '<h3>Studenten op opleiding:</h3>';
     echo '<ul>';
 
     foreach ($studenten as $student) {
