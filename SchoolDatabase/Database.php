@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $opleidingen = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     echo '<h3>Studenten per opleiding:</h3>';
-    echo '<form method="POST" action="studenten_bekijken.php">';
+    echo '<form method="POST" action="">';
     echo '<label for="opleidingscode">Opleiding:</label>';
     echo '<select name="opleidingscode" id="opleidingscode">';
 
@@ -85,20 +85,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo '<form method="POST" action="student_toevoegen.php">';
 
     $stmt = $pdo->query("DESCRIBE student");
-    $kolommen = $stmt->fetchAll(PDO::FETCH_COLUMN);
-
-    foreach ($kolommen as $kolom) {
-        echo '<label for="' . $kolom . '">' . $kolom . ':</label>';
-        echo '<input type="text" name="' . $kolom . '" id="' . $kolom . '"><br>';
-    }
-
-    echo '<input type="submit" value="Toevoegen">';
-    echo '</form>';
-
-    echo '<h3>Opleiding toevoegen:</h3>';
-    echo '<form method="POST" action="opleiding_toevoegen.php">';
-
-    $stmt = $pdo->query("DESCRIBE opleiding");
     $kolommen = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
     foreach ($kolommen as $kolom) {
