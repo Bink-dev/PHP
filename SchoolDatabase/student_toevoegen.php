@@ -37,24 +37,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Nieuwe student toevoegen</title>
-</head>
-<body>
-    <h1>Nieuwe student toevoegen</h1>
-    <form method="POST" action="student_toevoegen.php">
-        <?php
-        // Dynamisch genereren van invoervelden voor elke kolom in de tabel student
-        $query = $pdo->query("DESCRIBE student");
-        $columns = $query->fetchAll(PDO::FETCH_COLUMN);
-        foreach ($columns as $column) {
-            echo "<label for='$column'>$column:</label>";
-            echo "<input type='text' name='$column' required><br>";
-        }
-        ?>
-        <input type="submit" value="Toevoegen aan database">
-    </form>
-</body>
-</html>

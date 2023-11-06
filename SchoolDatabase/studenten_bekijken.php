@@ -10,7 +10,10 @@ $pdo = new PDO("mysql:host=$host;dbname=$dbName;charset=utf8", $username, $passw
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['opleidingscode'])) {
     $opleidingscode = $_POST['opleidingscode'];
 
-    $stmt = $pdo->prepare("SELECT s.roepnaam, s.tussenvoegsels, s.achternaam FROM student s INNER JOIN stu_opl so ON s.studentnr = so.studentnr WHERE so.opleidingscode = ?");
+    //echo $opleidingscode;
+    $query = "SELECT s.studentnr, s.roepnaam, s.tussenvoegsels, s.achternaam FROM student s INNER JOIN st_opl so ON s.studentnr = so.studentnr WHERE so.opleidingscode = '" . "$opleidingscode'";
+
+    $stmt = $pdo->prepare($query);
     $stmt->execute([$opleidingscode]);
     $studenten = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
